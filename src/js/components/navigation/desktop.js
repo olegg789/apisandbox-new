@@ -9,8 +9,7 @@ import {
 	Group,
 	Cell
 } from '@vkontakte/vkui';
-import ThemeControllers from './themeControllers';
-import { Icon28HomeOutline, Icon28Profile } from '@vkontakte/icons';
+import { Icon28ArrowUpCircleOutline, Icon28BookOutline, Icon28SettingsOutline} from '@vkontakte/icons';
 
 function DesktopNavigation({ router }) {
   const hasHeader = useSelector((state) => state.main.hasHeader)
@@ -21,25 +20,33 @@ function DesktopNavigation({ router }) {
         {hasHeader && <PanelHeader/>}
         <Group>
           <Cell
-            onClick={() => router.toView('home')}
-            disabled={router.activeView === 'home'}
-            before={<Icon28HomeOutline/>}
-            className={router.activeView === 'home' ? 'activeViewCell' : ''}
+            onClick={() => router.toView('api')}
+            disabled={router.activeView === 'api'}
+            before={<Icon28ArrowUpCircleOutline/>}
+            className={router.activeView === 'api' ? 'activeViewCell' : ''}
           >
-            Главная
+            VK API
           </Cell>
 
           <Cell
-            onClick={() => router.toView('profile')}
-            disabled={router.activeView === 'profile'}
-            before={<Icon28Profile/>}
-            className={router.activeView === 'profile' ? 'activeViewCell' : ''}
+            onClick={() => router.toView('bridge')}
+            disabled={router.activeView === 'bridge'}
+            before={<Icon28BookOutline/>}
+            className={router.activeView === 'bridge' ? 'activeViewCell' : ''}
           >
-            Профиль
+            VK Bridge
           </Cell>
+
+            <Cell
+                onClick={() => router.toView('settings')}
+                disabled={router.activeView === 'settings'}
+                before={<Icon28SettingsOutline/>}
+                className={router.activeView === 'settings' ? 'activeViewCell' : ''}
+            >
+                Настройки
+            </Cell>
         </Group>
 
-        <ThemeControllers/>
       </Panel>
     </SplitCol>
 	)

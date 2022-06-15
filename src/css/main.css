@@ -40,3 +40,121 @@ body[scheme=vkcom_dark] .vkuiGradient--md-tint.vkuiGradient--to-top {
     margin-bottom: 24px;
     color: var(--text_secondary)
 }
+
+.TabbarItem--selected .vkuiIcon {
+    animation-name: boop;
+    animation-duration: 0.7s;
+}
+
+.Cell--disabled .vkuiIcon {
+    animation-name: boop;
+    animation-duration: 0.7s;
+}
+
+.vkuiPanelHeaderButton--vkcom {
+    animation-name: boop;
+    animation-duration: 0.7s;
+}
+
+@keyframes boop {
+    25% {
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    50% {
+        -moz-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+/*renderjson*/
+.renderjson a              { text-decoration: none; user-select: text; }
+.renderjson .disclosure    { color: crimson; font-size: 150%; user-select: text; }
+.renderjson .syntax        { color: grey; user-select: text; }
+.renderjson .string        { color: green; user-select: text; }
+.renderjson .number        { color: dodgerblue; user-select: text; }
+.renderjson .boolean       { color: plum; user-select: text; }
+.renderjson .key           { color: #318495; user-select: text; }
+.renderjson .keyword       { color: lightgoldenrodyellow; user-select: text; }
+.renderjson .object.syntax { color: grey; user-select: text; }
+.renderjson .array.syntax  { color: lightsalmon; user-select: text; }
+
+.vkuiTabbarItem--selected {
+    color: #2B8FFE;
+}
+
+.vkuiPanelHeader__content-in {
+    color: #2B8FFE;
+}
+
+.vkuiTabbarItem--android .vkuiTabbarItem__tappable {
+    width: calc(100% + 16px);
+    padding-bottom: 0px;
+    border-radius: 50%;
+}
+
+.fixPaddingPlaceholder {
+    margin-top: -25px;
+    margin-bottom: -30px;
+}
+
+.podpis {
+    display: flex;
+    justify-content: center;
+    white-space: pre-wrap;
+}
+
+.scroll {
+    width: available !important;
+    overflow-x: auto !important;
+    word-wrap: normal;
+}
+
+.span.string {
+    overflow-x: scroll !important;
+    width: auto !important;
+}
+
+.div#responseTokenAccessToken.scroll {
+    overflow-x: scroll !important;
+    width: auto !important;
+}
+
+.start {
+    justify-content: center;
+    font-size: 50px;
+}
+
+.activeCellMenu {
+    background-color: var(--button_secondary_background);
+    border-radius: 8px
+}
+
+.btn_onboarding {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.btn_settings {
+    margin-bottom: 5px;
+}
+
+.vkuiGallery__layer {
+    cursor: default;
+}

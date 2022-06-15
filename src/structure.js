@@ -1,27 +1,33 @@
 const structure = [
 	{
-		id: "home",
-		hash: "home",
+		id: "api",
+		hash: "",
 		panels: [
 			{
-				id: "base",
-				hash: '/base'
-			},
-
-			{
-				id: "placeholder",
-				hash: '/placeholder'
+				id: "api",
+				hash: ''
 			}
 		]
 	},
 
 	{
-		id: "profile",
-		hash: "profile",
+		id: "bridge",
+		hash: "",
 		panels: [
 			{
-				id: "base",
-				hash: '/base'
+				id: "bridge",
+				hash: ''
+			}
+		]
+	},
+
+	{
+		id: "settings",
+		hash: "",
+		panels: [
+			{
+				id: "settings",
+				hash: ''
 			}
 		]
 	}

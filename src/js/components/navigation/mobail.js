@@ -5,7 +5,7 @@ import {
 	Tabbar,
 	TabbarItem
 } from '@vkontakte/vkui';
-import { Icon28HomeOutline, Icon28Profile } from '@vkontakte/icons';
+import {Icon28ArrowUpCircleOutline, Icon28BookOutline, Icon28SettingsOutline,} from '@vkontakte/icons';
 
 function MobailNavigation({ router }) {
 
@@ -14,24 +14,31 @@ function MobailNavigation({ router }) {
 		router.toView(view)
 		
 		if (view === nowView) {
-		  router.toHash(`${view}/base`)
+		  router.toHash(`${view}`)
 		}
 	}
 
 	return(
 	    <Tabbar>
 	      <TabbarItem
-	        selected={router.activeView === 'home'}
-	        onClick={() => openView('home')}
-	        text='Главная'
-	      ><Icon28HomeOutline/></TabbarItem>
+	        selected={router.activeView === 'api'}
+	        onClick={() => openView('api')}
+	        text='VK API'
+	      ><Icon28ArrowUpCircleOutline/></TabbarItem>
 
 	      <TabbarItem
-	        data-id='profile'
-	        selected={router.activeView === 'profile'}
-					onClick={() => openView('profile')}
-	        text='Профиль'
-	      ><Icon28Profile/></TabbarItem>
+	        data-id='bridge'
+	        selected={router.activeView === 'bridge'}
+					onClick={() => openView('bridge')}
+	        text='VK Bridge'
+	      ><Icon28BookOutline/></TabbarItem>
+
+			<TabbarItem
+				data-id='settings'
+				selected={router.activeView === 'settings'}
+				onClick={() => openView('settings')}
+				text='Настройки'
+			><Icon28SettingsOutline/></TabbarItem>
 	    </Tabbar>
 	)
 }
