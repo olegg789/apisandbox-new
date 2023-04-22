@@ -205,15 +205,12 @@ function ApiPanel({ router }) {
 
     async function getToken() {
         router.toPopout(<ScreenSpinner/>)
-
         try {
             try {
                 let scopes = []
-                // eslint-disable-next-line
                 selectedGroups.map((el) => {
                     scopes.push(el.label)
                 })
-
                 let response = await bridge.send(
                     "VKWebAppGetAuthToken",
                     {
@@ -221,17 +218,15 @@ function ApiPanel({ router }) {
                         scope: scopes.join()
                     }
                 )
-
                 if (response.scope !== scopes.join()) {
                     // eslint-disable-next-line
                     throw 'lets go to catch!'
                 }
-
                 setDisabledButtonMethod(false)
                 setUseMethod(false)
                 setTextButtonMethod(true)
                 setAccessToken(response.access_token)
-
+        
             } catch(err) {
                 console.log(err)
                 setSnackbar(
